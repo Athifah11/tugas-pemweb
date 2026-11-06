@@ -1,0 +1,580 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bloom & Blossom - Flower Shop</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #fff8f6;
+            color: #55443f;
+        }
+
+        /* HEADER */
+        header {
+            background-color: #f8e5e1;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header img {
+            width: 65px;
+            vertical-align: middle;
+        }
+
+        header h1 {
+            display: inline-block;
+            color: #994d4d;
+            font-family: Georgia, serif;
+            font-style: italic;
+            font-size: 38px;
+            margin: 5px;
+        }
+
+        header p {
+            color: #994d4d;
+            margin: 0;
+            font-family: Georgia, serif;
+            font-style: italic;
+        }
+
+        /* NAVIGATION */
+        nav {
+            background-color: #b96f76;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav li {
+            display: inline;
+            margin: 0 18px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #ffe1df;
+        }
+
+        /* BANNER */
+        .banner {
+            background-color: #f7e6e1;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 35px;
+            gap: 20px;
+        }
+
+        .banner-text {
+            text-align: center;
+            flex: 1;
+        }
+
+        .banner h2 {
+            color: #984c4c;
+            font-family: Georgia, serif;
+            font-style: italic;
+            font-size: 40px;
+        }
+
+        .banner p {
+            font-family: Georgia, serif;
+            font-size: 21px;
+            color: #984c4c;
+        }
+
+        .banner img {
+            width: 50%;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        /* MAIN CONTENT */
+        main {
+            max-width: 1200px;
+            margin: auto;
+            padding: 15px;
+        }
+
+        .content-row {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        section {
+            background-color: #ffffff;
+            padding: 22px;
+            border: 1px solid #f4ded9;
+            border-radius: 13px;
+        }
+
+        section h2 {
+            color: #b96f76;
+            font-family: Georgia, serif;
+            font-style: italic;
+            font-size: 29px;
+            margin-top: 0;
+        }
+
+        /* ABOUT */
+        #about {
+            flex: 1;
+            min-width: 0;
+        }
+
+        #about p {
+            line-height: 1.7;
+        }
+
+        /* FLOWERS */
+        #services {
+            flex: 2;
+            min-width: 0;
+        }
+
+        .flower-container {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .flower {
+            flex: 1;
+            min-width: 0;
+            background-color: #fff0ec;
+            border: 1px solid #f5d9d4;
+            border-radius: 12px;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .flower img {
+            width: 100%;
+            height: 175px;
+            object-fit: cover;
+        }
+
+        .flower h3 {
+            color: #994d4d;
+            margin-bottom: 8px;
+        }
+
+        .flower p {
+            font-size: 14px;
+            padding: 0 8px;
+            line-height: 1.4;
+        }
+
+        .price {
+            display: inline-block;
+            background-color: #f5d2cd;
+            color: #824141;
+            padding: 6px 12px;
+            border-radius: 20px;
+            margin-bottom: 12px;
+            font-size: 13px;
+        }
+
+        /* SPECIAL OFFERS */
+        #events {
+            flex: 1;
+        }
+
+        #events p {
+            line-height: 1.5;
+        }
+
+        .offer-content {
+            flex: 2;
+            background-color: #fff0ec;
+            padding: 22px;
+            border-radius: 13px;
+            border: 1px solid #f4ded9;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+        }
+
+        .offer-content h3 {
+            color: #a94e57;
+            font-family: Georgia, serif;
+            font-size: 24px;
+            margin-top: 0;
+        }
+
+        .offer-content img {
+            width: 40%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #b96f76;
+            color: white;
+            padding: 22px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        footer h2 {
+            font-family: Georgia, serif;
+            font-style: italic;
+            margin: 0 0 8px;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        footer a {
+            color: #ffe5e0;
+            text-decoration: none;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+
+            header h1 {
+                font-size: 28px;
+            }
+
+            nav li {
+                display: inline-block;
+                margin: 7px;
+            }
+
+            .banner {
+                flex-direction: column;
+            }
+
+            .banner img {
+                width: 100%;
+                height: 230px;
+            }
+
+            .banner h2 {
+                font-size: 30px;
+            }
+
+            .content-row {
+                flex-direction: column;
+            }
+
+            .flower-container {
+                flex-direction: column;
+            }
+
+            .flower img {
+                height: 230px;
+            }
+
+            .offer-content {
+                flex-direction: column;
+            }
+
+            .offer-content img {
+                width: 100%;
+            }
+
+            footer {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+
+        <img
+            src="https://cdn-icons-png.flaticon.com/512/3468/3468377.png"
+            alt="Flower Logo">
+
+        <h1>Bloom & Blossom</h1>
+
+        <p>Beautiful Flowers, Beautiful Moments</p>
+
+    </header>
+
+
+    <!-- NAVIGATION -->
+    <nav role="navigation">
+
+        <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Our Flowers</a></li>
+            <li><a href="#events">Special Offers</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+    </nav>
+
+
+    <!-- BANNER -->
+    <div class="banner">
+
+        <div class="banner-text">
+
+            <h2>Say It With Flowers!</h2>
+
+            <p>
+                Bringing happiness and beauty
+                to every special moment.
+            </p>
+
+        </div>
+
+        <img
+            src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=1000"
+            alt="Beautiful flower bouquet">
+
+    </div>
+
+
+    <main>
+
+        <!-- ABOUT AND FLOWERS -->
+        <div class="content-row">
+
+            <section id="about">
+
+                <h2>About Us</h2>
+
+                <p>
+                    Welcome to Bloom & Blossom, a flower shop
+                    dedicated to bringing beauty and happiness
+                    through fresh and beautiful flowers.
+                    We create lovely bouquets for birthdays,
+                    celebrations, anniversaries, and everyday
+                    surprises.
+                </p>
+
+                <p>
+                    Our mission is to make every moment more
+                    meaningful with flowers arranged with
+                    love and creativity.
+                </p>
+
+            </section>
+
+
+            <!-- OUR FLOWERS -->
+            <section id="services">
+
+                <h2>Our Flowers</h2>
+
+                <p>
+                    Discover our beautiful flower collections,
+                    carefully selected and arranged for every
+                    occasion.
+                </p>
+
+                <div class="flower-container">
+
+                    <!-- ROSE BOUQUET -->
+                    <div class="flower">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1494972308805-463bc619d34e?w=400"
+                            alt="Red rose bouquet">
+
+                        <h3>Rose Bouquet</h3>
+
+                        <p>
+                            Elegant roses perfect for expressing
+                            love and affection.
+                        </p>
+
+                        <span class="price">
+                            Starting from Rp75.000
+                        </span>
+
+                    </div>
+
+
+                    <!-- TULIP BOUQUET -->
+                    <div class="flower">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1520763185298-1b434c919102?w=400"
+                            alt="Tulip bouquet">
+
+                        <h3>Tulip Bouquet</h3>
+
+                        <p>
+                            Beautiful tulips that bring freshness
+                            and happiness.
+                        </p>
+
+                        <span class="price">
+                            Starting from Rp85.000
+                        </span>
+
+                    </div>
+
+
+                    <!-- SUNFLOWER BOUQUET -->
+                    <div class="flower">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1525310072745-f49212b5ac6d?w=400"
+                            alt="Sunflower bouquet">
+
+                        <h3>Sunflower Bouquet</h3>
+
+                        <p>
+                            Bright sunflowers to make someone's
+                            day more cheerful.
+                        </p>
+
+                        <span class="price">
+                            Starting from Rp90.000
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+
+        <!-- SPECIAL OFFERS -->
+        <div class="content-row">
+
+            <section id="events">
+
+                <h2>Special Offers</h2>
+
+                <p itemprop="description">
+                    Celebrate special moments with
+                    Bloom & Blossom!
+                </p>
+
+                <p>
+                    Enjoy our special flower arrangements
+                    and seasonal discounts for your loved ones.
+                </p>
+
+            </section>
+
+
+            <div class="offer-content"
+                 itemscope
+                 itemtype="https://schema.org/Event">
+
+                <div>
+
+                    <h3>Valentine Flower Sale</h3>
+
+                    <p>
+                        Special discounts for selected bouquets.
+                    </p>
+
+                    <strong>Offer Date:</strong>
+
+                    <p>
+                        <time itemprop="startDate"
+                              datetime="2027-02-01">
+                            February 1, 2027
+                        </time>
+
+                        -
+
+                        <time itemprop="endDate"
+                              datetime="2027-02-14">
+                            February 14, 2027
+                        </time>
+                    </p>
+
+                </div>
+
+                <img
+                    src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?w=500"
+                    alt="Romantic pink flower bouquet">
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer id="contact">
+
+        <div>
+
+            <h2>Contact Us</h2>
+
+            <p>
+                Want to order flowers or ask about our collections?
+            </p>
+
+            <p>
+                Contact us through email!
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <p>
+                Email:
+                <a href="mailto:171024000@student.ums.ac.id">
+                    171024000@student.ums.ac.id
+                </a>
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <p>
+                &copy; 2026 Bloom & Blossom Flower Shop
+            </p>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

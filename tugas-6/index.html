@@ -1,0 +1,128 @@
+html 6
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Discover Your World</title>
+
+    <!-- Favicon -->
+    <link
+        rel="icon"
+        type="image/png"
+        href="https://edube.org/uploads/media/default/0001/04/web-favicon.png"
+    >
+
+    <!-- External JavaScript -->
+    <script src="script.js" defer></script>
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>&#x1F30D; Discover Your World</h1>
+
+        <p>
+            Explore the continents of our world and discover
+            their unique geographical features!
+        </p>
+
+        <!-- Geolocation Button -->
+        <button id="getLocation">
+            Discover Location
+        </button>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+
+        <h2>Explore the Continents</h2>
+
+        <p>
+            Click on a continent to discover interesting
+            geographical facts about it.
+        </p>
+
+        <!-- World Map Image -->
+        <img
+            src="https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg"
+            alt="World Map"
+            usemap="#worldmap"
+            width="900"
+        >
+
+        <!-- Image Map -->
+        <map name="worldmap">
+
+            <!-- North America -->
+            <area
+                alt="North America"
+                title="North America"
+                id="north-america"
+                shape="rect"
+                coords="386,283,41,17"
+                href="#"
+            >
+
+            <!-- South America -->
+            <area
+                alt="South America"
+                title="South America"
+                id="south-america"
+                shape="rect"
+                coords="209,501,358,288"
+                href="#"
+            >
+
+            <!-- Europe -->
+            <area
+                alt="Europe"
+                title="Europe"
+                id="europe"
+                shape="rect"
+                coords="391,68,505,217"
+                href="#"
+            >
+
+            <!-- Africa -->
+            <area
+                alt="Africa"
+                title="Africa"
+                id="africa"
+                shape="rect"
+                coords="533,217,387,448"
+                href="#"
+            >
+
+            <!-- Asia -->
+            <area
+                alt="Asia"
+                title="Asia"
+                id="asia"
+                shape="rect"
+                coords="893,153,506,1"
+                href="#"
+            >
+
+            <!-- Australia and Oceania -->
+            <area
+                alt="Australia and Oceania"
+                title="Australia and Oceania"
+                id="australia-and-oceania"
+                shape="rect"
+                coords="679,353,872,480"
+                href="#"
+            >
+
+        </map>
+
+    </main>
+
+</body>
+
+</html>
